@@ -6,18 +6,18 @@ const Search = () => {
   return (
     <section className='bg-gray-800'>
       <div className='flex justify-between px-4 py-3'>
-        <div className='relative'>
+        <div className='relative max-w-md  w-full'>
           <div className='absolute inset-y-0 right-0 flex items-center pr-3'>
             <BiSearchAlt2 className='fill-current text-gray-500 h-6 w-6' />
           </div>
           <input
             placeholder='هل تبحث عن شيء ما؟'
-            className='bg-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900 text-white rounded-lg w-auto sm:w-80 pr-10  py-2'
+            className='block bg-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900 text-white rounded-lg pr-10 w-full py-2'
           />
         </div>
 
         <button
-          className={`inline-flex px-4 py-2 justify-center ${
+          className={`mr-4 inline-flex px-4 py-2 justify-center ${
             filter ? 'bg-gray-900' : 'bg-gray-700'
           } rounded-lg shadow hover:bg-gray-600`}
           onClick={() => setFilter(!filter)}>
@@ -41,8 +41,8 @@ const Search = () => {
       {/* Start Fillters Options */}
       {filter && (
         <form>
-          <fieldset className='px-4 py-4 border-t border-gray-900'>
-            <div className='flex -mx-2'>
+          <div className='px-4 py-4 border-t border-gray-900 sm:flex sm:items-center'>
+            <div className='flex -mx-2 sm:w-1/2 sm:mt-3'>
               <label className='block w-1/2 px-2'>
                 <span className='font-semibold text-sm text-gray-500'>
                   عدد الغرف
@@ -67,7 +67,7 @@ const Search = () => {
               </label>
             </div>
             {/* Price Range */}
-            <div className='mt-4'>
+            <div className='mt-4 sm:mt-0 sm:mr-4 sm:w-1/2'>
               <label className='block w-full '>
                 <span className='font-semibold text-sm text-gray-500'>
                   متوسط السعر
@@ -80,91 +80,95 @@ const Search = () => {
                 </select>
               </label>
             </div>
-          </fieldset>
-          <fieldset className='px-4 py-4 border-t border-gray-900'>
+          </div>
+          <div className='px-4 py-4 border-t border-gray-900'>
             <span className='block text-gray-500 text-sm text-semibold'>
               نوع المسكن
             </span>
-            <label className='flex items-center text-white mt-3'>
-              <input
-                className='form-radio ml-2 bg-gray-900'
-                type='radio'
-                name='propertyType'
-                value='house'
-              />
-              منزل
-            </label>
-            <label className='flex items-center text-white mt-3'>
-              <input
-                className='form-radio ml-2 bg-gray-900'
-                type='radio'
-                name='propertyType'
-                value='apartemnt'
-              />
-              شقة
-            </label>
-            <label className='flex items-center text-white mt-3'>
-              <input
-                className='form-radio ml-2 bg-gray-900'
-                type='radio'
-                name='propertyType'
-                value='townHouse'
-              />
-              منزل في وسط المدينة
-            </label>
-            <label className='flex items-center text-white mt-3'>
-              <input
-                className='form-radio ml-2 bg-gray-900'
-                type='radio'
-                name='propertyType'
-                value='shareRoom'
-              />
-              غرفة مشتركة
-            </label>
-          </fieldset>
-          <fieldset className='px-4 py-4 border-t border-gray-900'>
+            <div className='sm:flex sm:-mx-2'>
+              <label className='flex items-center sm:w-1/4 sm:px-2 text-white mt-3'>
+                <input
+                  className='form-radio ml-2 bg-gray-900'
+                  type='radio'
+                  name='propertyType'
+                  value='house'
+                />
+                منزل
+              </label>
+              <label className='flex items-center sm:w-1/4 sm:px-2 text-white mt-3'>
+                <input
+                  className='form-radio ml-2 bg-gray-900'
+                  type='radio'
+                  name='propertyType'
+                  value='apartemnt'
+                />
+                شقة
+              </label>
+              <label className='flex items-center sm:w-1/4 sm:px-2 text-white mt-3'>
+                <input
+                  className='form-radio ml-2 bg-gray-900'
+                  type='radio'
+                  name='propertyType'
+                  value='townHouse'
+                />
+                فندق
+              </label>
+              <label className='flex items-center sm:w-1/4 sm:px-2 text-white mt-3'>
+                <input
+                  className='form-radio ml-2 bg-gray-900'
+                  type='radio'
+                  name='propertyType'
+                  value='shareRoom'
+                />
+                غرفة مشتركة
+              </label>
+            </div>
+          </div>
+          <div className='px-4 py-4 border-t border-gray-900'>
             <span className='block text-gray-500 text-sm text-semibold'>
               المرافق
             </span>
-            <label className='flex items-center mt-3 text-white'>
-              <input
-                type='checkbox'
-                className='form-checkbox ml-2'
-                name='propertyType'
-                value='house'
-              />
-              بلكونة
-            </label>
-            <label className='flex items-center mt-3 text-white'>
-              <input
-                type='checkbox'
-                className='form-checkbox ml-2'
-                name='propertyType'
-                value='apartemnt'
-              />
-              حمام سباحة
-            </label>
-            <label className='flex items-center mt-3 text-white'>
-              <input
-                type='checkbox'
-                className='form-checkbox ml-2'
-                name='propertyType'
-                value='townHouse'
-              />
-              شاطئ
-            </label>
-            <label className='flex items-center mt-3 text-white'>
-              <input
-                type='checkbox'
-                className='form-checkbox ml-2'
-                name='propertyType'
-                value='shareRoom'
-              />
-              حديقة اطفال
-            </label>
-          </fieldset>
-          <div className='bg-gray-900 p-4'>
-            <button className='block w-full bg-indigo-500 hover:bg-indigo-400 text-white py-2 font-semibold rounded-lg'>
+            <div className='sm:flex sm:-mx-2 sm:flex-wrap'>
+              <label className='flex items-center mt-3 text-white  sm:w-1/4 '>
+                <input
+                  type='checkbox'
+                  className='form-checkbox ml-2'
+                  name='propertyType'
+                  value='house'
+                />
+                بلكونة
+              </label>
+              <label className='flex items-center mt-3 text-white  sm:w-1/4 '>
+                <input
+                  type='checkbox'
+                  className='form-checkbox ml-2'
+                  name='propertyType'
+                  value='apartemnt'
+                />
+                حمام سباحة
+              </label>
+              <label className='flex items-center mt-3 text-white  sm:w-1/4 '>
+                <input
+                  type='checkbox'
+                  className='form-checkbox ml-2'
+                  name='propertyType'
+                  value='townHouse'
+                />
+                شاطئ
+              </label>
+              <label className='flex items-center mt-3 text-white  sm:w-1/4 '>
+                <input
+                  type='checkbox'
+                  className='form-checkbox ml-2'
+                  name='propertyType'
+                  value='shareRoom'
+                />
+                حديقة اطفال
+              </label>
+            </div>
+          </div>
+          <div className='bg-gray-900 p-4 sm:mt-4'>
+            <button className='block w-full bg-indigo-500 px-4 hover:bg-indigo-400 text-white py-2 font-semibold rounded-lg sm:w-auto sm:inline-block'>
               تحديث البيانات
             </button>
           </div>

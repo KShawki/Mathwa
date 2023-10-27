@@ -25,7 +25,7 @@ export default function Home() {
               />
             </div>
             <div className='px-3 -mt-16 relative'>
-              <div className='bg-white rounded-lg p-4 shadow-lg'>
+              <div className='bg-white  rounded-lg p-4 shadow-lg w-80 sm:w-[360px]'>
                 <div className='flex items-center '>
                   <span className=' inline-block bg-teal-200 text-teal-800 px-2 py-0.5 leading-none font-bold text-[14px] rounded-full uppercase tracking-wide'>
                     سوبـر
