@@ -4,9 +4,9 @@ import { useState } from 'react';
 
 const Header = () => {
   const [navbar, setNavbar] = useState(false);
-  
+
   return (
-    <header className='bg-gray-900'>
+    <header className='bg-gray-900 sm:flex sm:items-center sm:justify-between'>
       <div className='px-4 py-3 flex justify-between'>
         <svg
           className='h-8 w-auto'
@@ -42,7 +42,7 @@ const Header = () => {
           </defs>
         </svg>
 
-        <button className='h-8 w-8 flex items-center justify-center'>
+        <button className='h-8 w-8 flex items-center justify-center sm:hidden'>
           {navbar ? (
             <AiOutlineClose
               className='text-gray-400 hover:text-white'
@@ -60,49 +60,50 @@ const Header = () => {
       </div>
       {/* Navbar */}
 
-      {navbar && (
-        <nav className='transition duration-300 ease-in-out'>
-          <div className='px-3 py-5 text-white border-b border-gray-700'>
-            <a
-              href='#'
-              className='block leading-tight font-semibold hover:bg-gray-800 rounded px-2 py-1'>
-              قائمة التفضيلات
+      <nav
+        className={`${
+          navbar ? 'block' : 'hidden'
+        } transition duration-300 ease-in-out sm:flex sm:items-center sm:px-4`}>
+        <div className={` px-3 py-5 text-white border-b border-gray-700 sm:border-b-0 sm:flex sm:flex-end sm:px-0`}>
+          <a
+            href='#'
+            className='block leading-tight font-semibold hover:bg-gray-800 rounded px-2 py-1 sm:text-md '>
+            قائمة التفضيلات
+          </a>
+          <a
+            href='#'
+            className='block mt-1 sm:mt-0 leading-tight font-semibold hover:bg-gray-800 rounded px-2 py-1 sm:text-md sm:mr-2'>
+            الرحلات
+          </a>
+          <a
+            href='#'
+            className='block mt-1 sm:mt-0 leading-tight font-semibold hover:bg-gray-800 rounded px-2 py-1 sm:text-md sm:mr-2'>
+            الرسائل
+          </a>
+        </div>
+        {/* Account */}
+        <div className='px-3 py-5 sm:py-0 sm:mr-4 sm:px-0'>
+          {/* Photo */}
+          <div className='flex gap-1 items-center'>
+            <img
+              src='/kshawki.jpg'
+              className='h-10 w-10 rounded-full object-cover border-2 border-gray-600 sm:h-8 sm:w-8'
+            />
+            <span className='text-gray-200 font-bold mr-2 sm:hidden'>خالد شوقي</span>
+          </div>
+          <div className='text-gray-400 my-3 sm:hidden'>
+            <a className='block hover:text-white mt-2' href='#'>
+              اعدادات الحساب
             </a>
-            <a
-              href='#'
-              className='block mt-1 leading-tight font-semibold hover:bg-gray-800 rounded px-2 py-1'>
-              الرحلات
+            <a className='block hover:text-white mt-2' href='#'>
+              الدعم الفني
             </a>
-            <a
-              href='#'
-              className='block mt-1 leading-tight font-semibold hover:bg-gray-800 rounded px-2 py-1'>
-              الرسائل
+            <a className='block hover:text-white mt-2' href='#'>
+              تسجيل الخروج
             </a>
           </div>
-          {/* Account */}
-          <div className='px-3 py-5'>
-            {/* Photo */}
-            <div className='flex gap-1 items-center'>
-              <img
-                src='/kshawki.jpg'
-                className='h-10 w-10 rounded-full object-cover border-2 border-gray-600'
-              />
-              <span className='text-gray-200 font-bold mr-2'>خالد شوقي</span>
-            </div>
-            <div className='text-gray-400 my-3'>
-              <a className='block hover:text-white mt-2' href='#'>
-                اعدادات الحساب
-              </a>
-              <a className='block hover:text-white mt-2' href='#'>
-                الدعم الفني
-              </a>
-              <a className='block hover:text-white mt-2' href='#'>
-                تسجيل الخروج
-              </a>
-            </div>
-          </div>
-        </nav>
-      )}
+        </div>
+      </nav>
     </header>
   );
 };

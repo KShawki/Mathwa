@@ -12,7 +12,7 @@ export const theme = {
     },
     padding: {
       '5/6': '83.3333333%'
-    }
+    } 
   },
   customForms: theme => ({
     lineHeight: theme('lineHeight.snug'),
