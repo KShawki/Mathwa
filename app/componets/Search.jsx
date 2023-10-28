@@ -41,9 +41,11 @@ const Search = () => {
       {/* Start Fillters Options */}
       {filter && (
         <form>
-          <div className='px-4 py-4 border-t border-gray-900 sm:flex sm:items-center'>
-            <div className='flex -mx-2 sm:w-1/2 sm:mt-3'>
-              <label className='block w-1/2 px-2'>
+          <div className='px-4 py-4 border-t border-gray-900'>
+            {/* ---------------------- */}
+            <div className='flex flex-wrap sm:items-center -mx-2'>
+              {/* Rooms & Pathrooms */}
+              <label className='block w-1/2 px-2 sm:w-1/4'>
                 <span className='font-semibold text-sm text-gray-500'>
                   عدد الغرف
                 </span>
@@ -54,7 +56,7 @@ const Search = () => {
                   <option value='4'>4</option>
                 </select>
               </label>
-              <label className='block w-1/2 px-2'>
+              <label className='block w-1/2 px-2 sm:w-1/4'>
                 <span className='font-semibold text-sm text-gray-500'>
                   دورات المياة
                 </span>
@@ -65,10 +67,8 @@ const Search = () => {
                   <option value='4'>4</option>
                 </select>
               </label>
-            </div>
-            {/* Price Range */}
-            <div className='mt-4 sm:mt-0 sm:mr-4 sm:w-1/2'>
-              <label className='block w-full '>
+              {/* Price Range */}
+              <label className='block w-full px-2 mt-4 sm:w-1/2 sm:mt-0'>
                 <span className='font-semibold text-sm text-gray-500'>
                   متوسط السعر
                 </span>
@@ -80,6 +80,7 @@ const Search = () => {
                 </select>
               </label>
             </div>
+            {/* ---------------------- */}
           </div>
           <div className='px-4 py-4 border-t border-gray-900'>
             <span className='block text-gray-500 text-sm text-semibold'>
