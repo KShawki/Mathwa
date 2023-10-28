@@ -11,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html dir='rtl'>
-      <body className='bg-gray-200'>{children}</body>
+      <body className='bg-gray-200 xl:min-h-screen xl:flex antialiased xl:flex-col xl:h-screen'>{children}</body>
     </html>
   );
 }

@@ -22,3 +22,7 @@
 body {
   font-family: 'Cairo', sans-serif;
 }
+
+.borderr {
+  @apply border-2 border-red-400; 
+}
