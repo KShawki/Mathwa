@@ -1,9 +1,11 @@
 <div dir='rtl'> 
-  <h1 align='center'>Mathwa | مثوى</h1>
+  <h1 align='center'>
+    <a href='https://mathwa.netlify.app' target='_blank'>Mathwa | مثوى</a>
+  </h1>
 </div>
 <center>
 
-[inspiration](https://www.figma.com/file/SNUysoGLVJPm286sgXCEm2Ag/tailwind-course?node-id=0%3A1) &middot; [Live Preview](https://xx.com)
+[inspiration](https://www.figma.com/file/SNUysoGLVJPm286sgXCEm2Ag/tailwind-course?node-id=0%3A1) &middot; [Live Preview](https://mathwa.netlify.app/)
 
 ![Project Review](public/img-MD.png)
 
@@ -13,11 +15,9 @@
 
 **Mathwa** is a project created with the primary goal of learining a Tailwind CSS tips and tricks, as well as general CSS best practices. Through this project, I explore various design concepts, including mobile-first design, and cater to different devices, such as mobile phones, iPads, laptops, and large screens.
 
-
 ### Key Objectives
 
-- **Tailwind CSS Mastery:** Our primary objective is to master the web development using TailwindCSS effectively. 
-
+- **Tailwind CSS Mastery:** Our primary objective is to master the web development using TailwindCSS effectively.
 
 - **Responsive Design:** Mathwa emphasizes the importance of responsive design, ensuring that our dashboard looks and functions flawlessly on a wide range of devices, from small mobile screens to large desktop monitors.
 
@@ -43,7 +43,6 @@ Mathwa's dashboard is designed to accommodate four key device categories:
 
 4. **Large Screens:** Designed to make the most of the available space on larger monitors, presenting a spacious and visually appealing dashboard.
 
-
 ## Installation
 
 How to install and configure the project?
@@ -62,7 +61,7 @@ npm install
 npm run dev
 ```
 
-## Technology 
+## Technology
 
 - **Next.js:** We chose [Next.js](https://nextjs.org/) for its efficient server-side rendering and routing capabilities. It offers a fast and optimized user experience.
 
